@@ -1,0 +1,23 @@
+<h2>Listing works</h2>
+
+<h3>Sound</h3>  
+<ul>
+    <% @works.each do |work| %>
+		<% if work.av = "sound" %>
+			<%= render 'workentry' %>
+		<% end %>
+    <% end %>
+</ul>
+
+<h3>Design</h3>
+<ul>
+    <% @works.each do |work| %>
+		<% if work.av = "design" %>
+			<%= render 'workentry' %>
+		<% end %>
+    <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New Work', new_work_path %>

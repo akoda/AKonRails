@@ -1,0 +1,56 @@
+<div id="top">
+	<div id="banner">
+
+		<%= link_to (image_tag("AlanKoda_BlackBadge120x120.png", alt: "Alan Koda Banner", id: "bannerimage")), root_path %>
+
+		<div id="bannertext">
+
+			<p id="maintitle">Alan Koda</p>
+
+			<ul id="contactinfo">
+				<li><em>Audio &amp; Design for Media</em></li>
+				<li>mail: <%= link_to "alan@alankoda.com", "mailto:alan@alankoda.com" %></li>
+				<li>phone: <%= link_to "817.308.5446", "tel:+18173085446" %></li>
+			</ul>
+		</div>
+	</div>
+
+	<nav class="mainnav" id="topnav">
+		<ul>
+			<li class="about">About
+				<nav class="subnav" id="aboutsubnav">
+					<ul>
+						<li class="aboutme"><%= link_to "About Me", aboutme_path %></li>
+						<li class="resume"><%= link_to "Resume", resume_path %></li>
+						<li class="awards"><%= link_to "Awards", awards_path %></li>
+					</ul>
+				</nav>
+			</li>
+			<li class="work">Work
+				<nav class="subnav" id="worksubnav">
+					<ul>
+						<li class="films"><%= link_to "Sound", sound_path %></li>
+						<li class="design"><%= link_to "Design", design_path %></li>
+						<li class="software"><%= link_to "Software", software_path %></li>
+					</ul>
+				</nav>
+			</li>
+			<li class="contact">Contact
+				<nav class="subnav" id="contactsubnav">
+					<ul>
+						<li><%= link_to "alan@alankoda.com", "mailto:alan@alankoda.com" %></li>
+						<li><%= link_to "817.308.5446", "tel:+18173085446" %></li>
+					</ul>
+				</nav>
+			</li>
+		</ul>
+	</nav>
+
+	<p id="sociallinks">
+		<%= link_to image_tag("twitter_icon_bw.jpg", alt: "twitter_icon_color", mouseover: "twitter_icon_color.jpg"), "http://www.twitter.com/KodaSound/" %>
+		<%= link_to image_tag("tumblr_icon_bw.jpg", alt: "tumblr_icon_color", mouseover: "tumblr_icon_color.jpg"), "http://kodasound.tumblr.com/" %>
+		<%= link_to image_tag("linkedin_icon_bw.jpg", alt: "linkedin_icon_color", mouseover: "linkedin_icon_color.jpg"), "http://www.linkedin.com/in/alankoda/" %>
+		<%= link_to image_tag("facebook_icon_bw.jpg", alt: "facebook_icon_color", mouseover: "facebook_icon_color.jpg"), "http://www.facebook.com/pages/KodaSound/133981336687315/" %>
+	</p>
+
+</div>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<%= content_tag :div, class: @work.category do %>
+	<%= content_tag :h3, @work.name %>
+	<%= content_tag :h4, @work.series if @work.series %>
+  	<%= content_tag :h4, @work.publisher if @work.publisher %>
+	<%= @work.role %>
+	<%= @work.embed.html_safe %>
+
+	<%= link_to 'Edit', edit_work_path(@work) %> |
+	<%= link_to 'Back', works_path %>
+<% end %>

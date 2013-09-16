@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<%= render "layouts/head" %>
+<body>
+	<div id="gutters">
+		<div id="container">
+			<div id="content">
+				
+				<%= render "layouts/header" %>
+
+				<div id="subcontents">
+
+					<%= yield %>
+
+				</div>
+				
+				<%= render "layouts/footer" %>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
