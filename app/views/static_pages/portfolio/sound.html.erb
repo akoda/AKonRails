@@ -20,16 +20,8 @@
 		</nav>
 	
 		<%= @works.each do |work| %>
-			<% if @works.av == "sound" %>
-				<div>
-		        	<%= content_tag :h5, work.name %>
-					<%= content_tag :h4, @work.series if @work.series %>
-				  	<%= content_tag :h4, @work.publisher if @work.publisher %>
-			        <%= work.embed.html_safe %>
-					<%= content_tag :h3, work.av %>
-					<%= content_tag :h4, work.category %>
-					<%= @work.role %>
-				</div>
+			<% if work.av == "sound" %>
+				<%= render partial: "works/work_entry", locals: { work: work }%>
 			<% end %>
 	    <% end %>
 

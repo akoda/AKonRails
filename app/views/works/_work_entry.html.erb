@@ -1,0 +1,7 @@
+<div>
+	<h3><%= content_tag :em, work.name %>, <%= work.category %></h3>
+	<%= content_tag :h4, work.series if work.series %>
+  	<h4>produced by <%= work.publisher if work.publisher %></h4>
+	<%= content_tag(:h4, work.role) if work.role %>
+    <%= work.embed.html_safe %>
+</div>

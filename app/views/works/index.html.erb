@@ -1,19 +1,21 @@
 <h2>Listing works</h2>
 
-<h3>Sound</h3>  
+<h1>Sound</h1>  
 <ul>
     <% @works.each do |work| %>
-		<% if work.av = "sound" %>
-			<%= render 'workentry' %>
+		<% if work.av == "sound" %>
+			<%= render partial: "work_entry", locals: { work: work }%>
+			<%= render partial: "work_entry_edit", locals: { work: work }%>
 		<% end %>
     <% end %>
 </ul>
 
-<h3>Design</h3>
+<h1>Design</h1>
 <ul>
     <% @works.each do |work| %>
-		<% if work.av = "design" %>
-			<%= render 'workentry' %>
+		<% if work.av == "design" %>
+			<%= render partial: "work_entry", locals: { work: work }%>
+			<%= render partial: "work_entry_edit", locals: { work: work }%>
 		<% end %>
     <% end %>
 </ul>
