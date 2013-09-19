@@ -1,4 +1,6 @@
 AKonRails::Application.routes.draw do
+  root "static_pages#index"  
+  
   get "index", to: "static_pages#index", as: "index"
   
   get "about/me", to: "static_pages#about/me", as: "aboutme"
@@ -9,8 +11,9 @@ AKonRails::Application.routes.draw do
   get "portfolio/design", to: "static_pages#portfolio/design", as: "design"
   get "portfolio/software", to: "static_pages#portfolio/software", as: "software"
   
-  root "static_pages#index"
-  resources :works
+  scope "/portfolio" do
+    resources :works
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
