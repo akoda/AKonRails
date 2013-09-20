@@ -19,11 +19,13 @@
 			</ul>
 		</nav>
 	
-		<%= @works.each do |work| %>
+		<% @works.each do |work| %>
 			<% if work.av == "sound" %>
 				<%= render partial: "works/work_entry", locals: { work: work }%>
 			<% end %>
 	    <% end %>
+	
+		<p class="backtotop designbacktotop"><a href="#">&uarr; back to top</a></p>
 
 	</div>
 </div>
